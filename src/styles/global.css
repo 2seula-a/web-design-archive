@@ -317,6 +317,7 @@ button {
   border-radius: 9px;
   box-shadow: 0 8px 24px var(--shadow-card);
   transition: transform .28s ease, box-shadow .28s ease, background-color .25s ease, border-color .25s ease;
+  height: 100;
 }
 
 .project-card:hover {
@@ -336,6 +337,7 @@ button {
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
   transition: transform .3s ease;
 }
 
@@ -383,6 +385,7 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  align-items: flex-start;
 }
 
 .card-body h2 {
@@ -400,8 +403,15 @@ button {
 .project-description {
   margin: 5px 0 0;
   color: var(--color-muted);
-  font-family: Georgia, serif;
+  font-family: Georgia, 'Noto Sans KR', serif;
   font-size: 14px;
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
 }
 
 .card-arrow {
@@ -565,6 +575,36 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.project-action-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.project-period {
+  margin: 12px 0 0;
+  color: var(--color-muted);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+}
+
+.figma-button {
+  padding: 13px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-card);
+  color: var(--color-text);
+  font-size: 13px;
+  transition: background .25s ease, border-color .25s ease;
+}
+
+.figma-button:hover {
+  background: var(--color-button-hover);
 }
 
 .primary-button,
