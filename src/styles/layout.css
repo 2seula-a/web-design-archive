@@ -1,0 +1,13 @@
+.main-content {
+  min-height: 100vh;
+  margin-left: 254px;
+}
+
+.works-page,
+.detail-page,
+.content-page {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 42px 48px 80px;
+}
+

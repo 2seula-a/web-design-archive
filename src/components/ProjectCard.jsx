@@ -12,6 +12,9 @@ export default function ProjectCard({ project }) {
         <img
           src={project.image}
           alt={project.alt}
+          style={{
+            objectPosition: project.cardImagePosition || "center",
+          }}
           onError={(event) =>
             event.currentTarget.parentElement.classList.add("image-error")
           }

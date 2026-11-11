@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+@import './styles/global.css';
+@import './styles/Sidebar.css';
+@import './styles/layout.css';
+@import './styles/Works.css';
+@import './styles/ProjectDetail.css';
+@import './styles/ContentPages.css';
+@import './styles/animations.css';
+@import './styles/responsive.css';
