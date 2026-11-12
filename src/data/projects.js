@@ -52,7 +52,7 @@ export const projects = [
 },
 {
   slug: 'yeoul-hospital',
-  period: '2026.11.06 - 2026.진행중',
+  period: '2026.10.30 - 2026.11.12',
   title: '여울병원',
   categories: ['Personal', 'Corporate'],
   type: 'Hospital Website',
