@@ -2,6 +2,8 @@ import { useState } from "react";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../data/projects";
+import CaseStudyDetail from "../components/CaseStudyDetail";
+import ImageLightbox from "../components/ImageLightbox";
 
 const Pending = () => (
   <p className="pending-copy">프로젝트 정보를 추후 입력할 예정입니다.</p>
@@ -29,7 +31,7 @@ export default function ProjectDetail() {
       <header className="detail-hero">
         <p className="eyebrow">{project.categories.join(" · ")}</p>
         <h1>{project.title}</h1>
-        {project.period && (
+        {project.period && !project.caseStudy && (
           <p className="project-period">제작 기간 · {project.period}</p>
         )}
         {project.mediaType === "video" && (
@@ -37,7 +39,14 @@ export default function ProjectDetail() {
         )}
         <p>{project.description}</p>
       </header>
-      {project.mediaType === "video" ? (
+      {project.caseStudy ? (
+        <>
+          <div className="detail-visual case-hero-visual">
+            <ImageLightbox src={project.image} alt={project.alt} />
+          </div>
+          <CaseStudyDetail project={project} />
+        </>
+      ) : project.mediaType === "video" ? (
         <>
           <section
             className="video-player-section"
